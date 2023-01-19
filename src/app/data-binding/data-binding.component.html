@@ -1,1 +1,29 @@
-<p>data-binding works!</p>
+<section>
+    <h3>Jogos</h3>
+    <div>
+        Selecione um jogo
+        <select #jogoSelecionado (change)="0">
+            <option value="Hollow Knight">Hollow Knight</option>
+            <option value="Until Dawn">Until Dawn</option>
+            <option value="The Last of Us">The Last of Us</option>
+            <option value="Remember Me">Remember Me</option>
+        </select>
+        <br><br>
+        <div *ngIf="jogoSelecionado.value == 'Hollow Knight'">
+            O jogo selecionado é Hollow Knight
+        </div>
+        <div *ngIf="jogoSelecionado.value == 'Until Dawn'">
+            O jogo selecionado é Until Dawn
+        </div>
+        <div *ngIf="jogoSelecionado.value == 'The Last of Us'">
+            O jogo selecionado é The Last of Us
+        </div>
+        <div *ngIf="jogoSelecionado.value == 'Remember Me'">
+            O jogo selecionado é Remember Me
+        </div>
+        <br><br>
+        <div>
+            O jogo selecionado é {{ jogoSelecionado.value }}
+        </div>
+    </div>
+</section>
