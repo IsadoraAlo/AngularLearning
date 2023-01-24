@@ -1,0 +1,24 @@
+<div alt="Max-width 100%">
+    <div class="d-flex justify-content-center align-items-center">
+        <article>
+            <h3>Event Binding</h3>
+            <div>
+                <button (click)="onEvent()" class="btn btn-outline-info btn-lg">
+                    Disparar evento
+                </button>
+                <br><br>
+                <input #textInputEvent type="text" (keyup)="onKeyUp($event)" (keyup.enter)="onSave(textInputEvent.value)">
+                <br><br>
+                <p>
+                    A frase atual é: {{ actualValue }}
+                </p>
+                <p>
+                    A frase salva foi: {{ savedValue }}
+                </p>
+                <span (mouseover)="mouseOverOut()" (mouseout)="mouseOverOut()" [class.highlight]="mouseOver">
+                    Passe o mouse
+                </span>
+            </div>
+        </article>
+    </div>
+</div>
