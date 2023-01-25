@@ -1,0 +1,40 @@
+<div alt="Max-width 100%">
+    <div class="d-flex justify-content-center align-items-center">
+        <article>
+            <h3>Two-way Data Binding</h3>
+            <br>
+            <div>
+                <div>
+                    <label>Nome</label><br>
+                    <input type="text" [value]="name" (input)="name = $any($event.target).value">
+                </div>
+                <br>
+                <div>
+                    <label>Nome</label><br>
+                    <input type="text" [(ngModel)]="name" aria-label="Nome">
+                </div>
+                <br>
+                <div>
+                    <p>
+                        O nome informado foi: {{ name }}
+                    </p>
+                </div>
+                <div>
+                    <div>
+                        <label>Nome</label><br>
+                        <input type="text" [(ngModel)]="person.name">
+                    </div>
+                    <br>
+                    <div>
+                        <label>CPF</label><br>
+                        <input type="text" [(ngModel)]="person.cpf" >
+                    </div>
+                    <br>
+                    <p>
+                        A pessoa em questão se chama {{ person.name }}, e está registrada sobre o CPF de número {{ person.cpf }}
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
