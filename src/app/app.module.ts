@@ -7,13 +7,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
     EventBindingComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    InputPropertyComponent
   ],
   imports: [
     BrowserModule,
