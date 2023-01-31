@@ -30,8 +30,11 @@
                 </div>
             </div>
         </section> -->
-        <section>
+        <!-- <section>
             <app-input-property [description]="descriptionProperty"></app-input-property>
+        </section> -->
+        <section>
+            <app-output-property [numberMath]="valorInicial" (valueChange)="onValueChange($event)"></app-output-property>
         </section>
     </div>
 </div>
